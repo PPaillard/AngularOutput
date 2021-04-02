@@ -21,7 +21,6 @@ export class MagicOvenComponent implements OnInit {
   }
 
   sendCookies(){
-    alert(this.nbCookies)
     this.getCookies.emit(this.nbCookies);
   }
 

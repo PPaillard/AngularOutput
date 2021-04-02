@@ -26,7 +26,7 @@ export class KitchenComponent implements OnInit {
   }
 
   onGetCookies($event:number) {
-    this.cookiesCooked = $event;
+    this.cookiesCooked += $event;
   }
 
 }
