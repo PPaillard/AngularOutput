@@ -1,0 +1,50 @@
+<!-- in app-kitchen -->
+
+<form (submit)="startCooking()" class="formulaire">
+
+    <h4>My Kitchen</h4>
+
+    <label for="flour">Flour quantity :</label>
+    <input type="number" name="flour" [(ngModel)]="flourQuantity">
+
+
+    <label for="salt">Salt quantity :</label>
+    <input type="number" name="salt" [(ngModel)]="saltQuantity">
+
+    <label for="sugar">Sugar quantity :</label>
+    <input type="number" name="sugar" [(ngModel)]="sugarQuantity">
+
+    <label for="egg">Egg quantity :</label>
+    <input type="number" name="egg" [(ngModel)]="eggQuantity">
+
+    <label for="number">Number of cookies :</label>
+    <input type="number" name="number" [(ngModel)]="numberOfCookies">
+
+    <div>
+        <h4>Cookies cuisinés : {{cookiesCooked}}</h4>
+    </div>
+
+    <div>
+        <button type="submit">Cook !</button>
+    </div>
+</form>
+
+<!-- in app-kitchen -->
+
+<app-magic-oven *ngIf="cook"
+
+[startCooking]="cook" 
+
+[nbCookies]="numberOfCookies"
+
+[flour]="flourQuantity" 
+
+[salt]="saltQuantity" 
+
+[sugar]="sugarQuantity"
+
+[egg]="eggQuantity">
+
+(getCookies)="onGetCookies($event)">
+
+</app-magic-oven>
